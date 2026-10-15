@@ -1,0 +1,5 @@
+# Compiled executable
+/vector
+
+# Object files
+*.o
