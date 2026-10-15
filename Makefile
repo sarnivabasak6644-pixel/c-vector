@@ -1,7 +1,7 @@
 CC := clang
-CFLAGS := -std=c23 -Wall -Wextra -Wpedantic -Wconversion -Wsign-conversion -Wshadow -Werror -g
+CFLAGS := -std=c23 -Wall -Wextra -Wpedantic -Wconversion -Wsign-conversion -Wshadow -Werror -g 
 TARGET := vector
-SRC := vector.c
+SRC := main.c vector.c
 OBJ := $(SRC:.c=.o)
 
 .PHONY: all clean run
