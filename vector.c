@@ -1,6 +1,5 @@
 #include "vector.h"
 #include <stdint.h>
-#include <stdio.h>
 #include <stdlib.h>
 
 void vector_init(vector *v) {
@@ -57,5 +56,13 @@ bool vector_get(vector *v, size_t index, int *value) {
         return false;
     }
     *value = *(v->data + index);
+    return true;
+}
+
+bool vector_set(vector *v, size_t index, int value) {
+    if (index >= v->size) {
+        return false;
+    }
+    *(v->data + index) = value;
     return true;
 }

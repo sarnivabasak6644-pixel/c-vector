@@ -44,6 +44,20 @@ int main(void) {
     if (!vector_get(&numbers, 5, &value)) {
         printf("Correctly rejected invalid index 5.\n");
     }
+
+    if (vector_set(&numbers, 2, 99)) {
+        printf("Successfully updated element at index 2.\n");
+    } else {
+        fprintf(stderr, "Error: Failed to set element at index 2.\n");
+    }
+
+    if (vector_get(&numbers, 2, &value)) {
+        printf("Element at index 2: %d\n", value);
+    }
+
+    if (!vector_set(&numbers, 5, 100)) {
+        printf("Correctly rejected invalid index 5.\n");
+    }
     vector_destroy(&numbers);
     return EXIT_SUCCESS;
 }
