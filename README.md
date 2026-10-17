@@ -10,6 +10,7 @@ This project implements a vector data structure using dynamic memory allocation.
 - Append elements dynamically.
 - Remove the last element.
 - Retrieve elements by index.
+- Update elements by index.
 - Handle invalid indices and allocation failures.
 - Release allocated memory.
 
@@ -35,11 +36,3 @@ Run:
 ```sh
 make
 ```
-
-## Memory Management
-
-The vector uses dynamically allocated memory.
-
-Call `vector_destroy()` when you are finished using a vector to release its allocated memory.
-
-Initialize each vector with `vector_init()` before using it.
